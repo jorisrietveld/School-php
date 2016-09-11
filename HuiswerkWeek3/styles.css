@@ -1,0 +1,45 @@
+#tests {
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+}
+
+#tests > table{
+    width: 400px;
+    float: left;
+    margin-bottom: 50px;
+}
+
+#tests > table >thead{
+    background-color: #7eb0db;
+    color: darkblue;
+}
+
+#tests > table > tbody tr{
+    height:30px;
+    flex: auto;
+}
+#tests >table > tbody > tr td{
+    text-align: center;
+    width: 300px;
+}
+
+#tests > table > tbody tr:nth-child(even){
+    background-color: #7eb0db;
+    color: white;
+    border-bottom-right-radius: 10px;
+}
+
+#code{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted gray;
+    border-radius: 20px;
+    background-color: azure;
+    padding: 10px;
+}
+#code legend{
+    font-size: 20px;
+    font-weight: bold;
+}
