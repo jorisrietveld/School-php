@@ -1,0 +1,27 @@
+#form-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    padding-top: 30px;
+}
+
+#form-input-fahrenheit, #form-output-celcius{
+    width: 50px;
+}
+
+#form-wrapper button{
+    margin-left: 10px;
+}
+#code{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted gray;
+    border-radius: 20px;
+    background-color: azure;
+    padding: 10px;
+}
+#code legend{
+    font-size: 20px;
+    font-weight: bold;
+}
