@@ -85,8 +85,8 @@ $table2 .= '</tbody></table>';
 
 <br />
 <fieldset id="code">
-    <legend>Source code: Opdracht1.php</legend>
-    <?= highlight_file('Opdracht1.php', true ) ?>
+    <legend>Source code: Opdracht2.php</legend>
+    <?= highlight_file('Opdracht2.php', true ) ?>
 </fieldset>
 
 </body>

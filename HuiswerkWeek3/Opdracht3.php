@@ -23,8 +23,8 @@ function lessthanOrGreaterThan( $number )
 </head>
 <body>
 <fieldset id="code">
-    <legend>Source code: Opdracht2.php</legend>
-    <?= highlight_file('Opdracht2.php', true ) ?>
+    <legend>Source code: Opdracht3.php</legend>
+    <?= highlight_file('Opdracht3.php', true ) ?>
 </fieldset>
 
 </body>
