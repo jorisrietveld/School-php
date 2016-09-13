@@ -7,8 +7,8 @@
 function forLoopArt( $height, $width )
 {
     $funcOutput = '';
-
-    for( $x=0; $x < $height; $x++ ){
+    for( $x=0; $x < $height; $x++ )
+    {
         for( $q = 0; $q < $width; $q++ )
         {
             $funcOutput .= '* ';
@@ -23,10 +23,10 @@ function forLoopArt( $height, $width )
 function whileLoopArt( $height, $width  )
 {
     $funcOutput = '';
-    $counter = 0;
     $fCounter = 0;
-
-    while ( $fCounter < $height ){
+    while ( $fCounter < $height )
+    {
+        $counter = 0;
         while ( $counter < $width )
         {
             $funcOutput .= '* ';
@@ -42,17 +42,20 @@ function whileLoopArt( $height, $width  )
 function whileDoArt( $height, $width  )
 {
     $funcOutput = '';
-    $counter = 0;
     $fCounter = 0;
-
-    do{
-        do{
+    do
+    {
+        $counter = 0;
+        do
+        {
             $funcOutput .= '* ';
             $counter++;
-        }while( $counter < $width );
+        }
+        while( $counter < $width );
         $funcOutput .= '<br />';
         $fCounter++;
-    }while( $fCounter < $height );
+    }
+    while( $fCounter < $height );
 
 
     return $funcOutput;
@@ -76,8 +79,8 @@ function whileDoArt( $height, $width  )
 
 <br />
 <fieldset id="code">
-    <legend>Source code: Opdracht5.php</legend>
-    <?= highlight_file('Opdracht5.php', true ) ?>
+    <legend>Source code: Opdracht6.php</legend>
+    <?= highlight_file('Opdracht6.php', true ) ?>
 </fieldset>
 
 </body>

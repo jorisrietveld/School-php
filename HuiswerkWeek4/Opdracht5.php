@@ -7,12 +7,10 @@
 function forLoopArt( $iterations )
 {
     $funcOutput = '';
-
     for( $q = 0; $q < $iterations; $q++ )
     {
          $funcOutput .= '* ';
     }
-
     return $funcOutput;
 }
 
@@ -20,13 +18,11 @@ function whileLoopArt( $iterations )
 {
     $funcOutput = '';
     $counter = 0;
-
     while ( $counter < $iterations )
     {
         $funcOutput .= '* ';
         $counter++;
     }
-
     return $funcOutput;
 }
 
@@ -34,12 +30,12 @@ function whileDoArt( $iterations )
 {
     $funcOutput = '';
     $counter = 0;
-
-    do{
+    do
+    {
         $funcOutput .= '* ';
         $counter++;
-    }while( $counter < $iterations );
-
+    }
+    while( $counter < $iterations );
     return $funcOutput;
 }
 ?>

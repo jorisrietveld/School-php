@@ -7,7 +7,7 @@
 $datum = 14062016;
 
 // First move the comma 6 decimal places then remove all decimals.
-$dag = $datum / 1000000 % 1000000;
+$dag = $datum / 1000000 % 32;
 
 // First move the comma 4 decimal places then remove the leading day numbers.
 $maand = ( $datum / 10000 ) % $dag;

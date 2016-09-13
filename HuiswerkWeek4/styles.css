@@ -1,7 +1,7 @@
 #tests {
     margin-left: auto;
     margin-right: auto;
-    width: 850px;
+    width: 600px;
 }
 
 #code{
@@ -20,4 +20,9 @@
 .center{
     margin-left:auto;
     margin-right:auto;
+}
+
+.triangle-tests{
+    float: left;
+    width: 200px;
 }
