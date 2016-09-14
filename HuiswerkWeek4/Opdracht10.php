@@ -4,28 +4,16 @@
  * Created: 11-09-2016 08:33
  */
 
-function opdracht1( $width )
+function loopSom( $max )
 {
-    $fOutput = '';
-    for ($a = 0; $a < $width; $a++)
-    {
-        $mem = $width;
-        for ($b = 0; $b < $width; $b++)
-        {
-            if ($mem <= $width - $a)
-            {
-                $fOutput .= ' ';
-            }
-            else
-            {
-                $fOutput .= '* ';
-            }
-            $mem--;
-        }
-        $fOutput .= '<br/>';
-    }
+    $total = 0;
 
-    return $fOutput;
+    for($i=1; $i < ($max+1); $i++)
+    {
+        printf('Iteration: %d Total: %d<br>', $i, $total);
+        $total += $i;
+    }
+    return $total   ;
 }
 
-echo opdracht1( 5 );
+echo 'Final: '.loopSom(99);
