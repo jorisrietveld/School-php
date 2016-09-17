@@ -1,0 +1,28 @@
+
+
+#code{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted gray;
+    border-radius: 20px;
+    background-color: azure;
+    padding: 10px;
+}
+#code legend{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-wrapper{
+    width: 800px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.first{
+    color: red;
+}
+.last{
+    color: blue;
+}

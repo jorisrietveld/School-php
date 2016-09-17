@@ -3,29 +3,44 @@
  * Author: Joris Rietveld <jorisrietveld@gmail.com>
  * Created: 11-09-2016 08:31
  */
+declare(strict_types=1);
 
-function numberToStringWithIfElse($grade)
+function numberToStringWithIfElse( int $grade ) : string
 {
-    if ($grade < 1 || $grade > 10) {
+    if ($grade < 1 || $grade > 10)
+    {
         return "Ongeldig cijfer";
-    } elseif ($grade >= 1 && $grade <= 3) {
+    }
+    elseif ($grade >= 1 && $grade <= 3)
+    {
         return "Zeer slecht";
-    } elseif ($grade >= 4 && $grade <= 5) {
+    }
+    elseif ($grade >= 4 && $grade <= 5)
+    {
         return "Onvoldoende";
-    } elseif ($grade >= 6 && $grade <= 7) {
+    }
+    elseif ($grade >= 6 && $grade <= 7)
+    {
         return "Voldoende";
-    } elseif ($grade == 8) {
+    }
+    elseif ($grade == 8)
+    {
         return "Goed";
-    } elseif ($grade == 9) {
+    }
+    elseif ($grade == 9)
+    {
         return "Zeergoed";
-    } else {
+    }
+    else
+    {
         return "uitmuntend";
     }
 }
 
-function numberToStringWithSwitch($grade)
+function numberToStringWithSwitch( int $grade ) : string
 {
-    switch ($grade) {
+    switch ($grade)
+    {
         case 1;
         case 2;
         case 3;
@@ -54,19 +69,25 @@ function numberToStringWithSwitch($grade)
     }
 }
 
-// Generate table 1
-$table1 = '<table cellpadding="0" cellspacing="0"><thead><tr><th colspan="2">Test with if/else control flow</th> </tr><tr><th>Tested grade:</th><td>Text representation</td></tr></thead><tbody>';
-for ($a = 0; $a <= 11; $a++) {
-    $table1 .= '<tr><td>'.$a.'</td><td>'.numberToStringWithIfElse($a).'</td>';
-}
-$table1 .= '</tbody></table>';
+try {
+    // Generate table 1
+    $table1 = '<table cellpadding="0" cellspacing="0"><thead><tr><th colspan="2">Test with if/else control flow</th> </tr><tr><th>Tested grade:</th><td>Text representation</td></tr></thead><tbody>';
+    for ($a = 0; $a <= 11; $a++) {
+        $table1 .= '<tr><td>' . $a . '</td><td>' . numberToStringWithIfElse($a) . '</td>';
+    }
+    $table1 .= '</tbody></table>';
 
-// Generate table 2
-$table2 = '<table style="margin-left: 50px" cellpadding="0" cellspacing="0"><thead><tr><th colspan="2">Test with switch control flow</th> </tr><tr><th>Tested grade:</th><td>Text representation</td></tr></thead><tbody>';
-for ($a = 0; $a <= 11; $a++) {
-    $table2 .= '<tr><td>'.$a.'</td><td>'.numberToStringWithIfElse($a).'</td>';
+    // Generate table 2
+    $table2 = '<table style="margin-left: 50px" cellpadding="0" cellspacing="0"><thead><tr><th colspan="2">Test with switch control flow</th> </tr><tr><th>Tested grade:</th><td>Text representation</td></tr></thead><tbody>';
+    for ($a = 0; $a <= 11; $a++) {
+        $table2 .= '<tr><td>' . $a . '</td><td>' . numberToStringWithIfElse($a) . '</td>';
+    }
+    $table2 .= '</tbody></table>';
 }
-$table2 .= '</tbody></table>';
+catch(Exception $e)
+{
+    //todo: handle exceptoin
+};
 ?>
 
 <!DOCTYPE html>

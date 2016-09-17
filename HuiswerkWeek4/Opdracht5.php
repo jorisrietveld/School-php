@@ -4,7 +4,9 @@
  * Created: 11-09-2016 08:32
  */
 
-function forLoopArt( $iterations )
+declare(strict_types=1);
+
+function forLoopArt( int $iterations ) : string
 {
     $funcOutput = '';
     for( $q = 0; $q < $iterations; $q++ )
@@ -14,7 +16,7 @@ function forLoopArt( $iterations )
     return $funcOutput;
 }
 
-function whileLoopArt( $iterations )
+function whileLoopArt( int $iterations ) : string
 {
     $funcOutput = '';
     $counter = 0;
@@ -26,7 +28,7 @@ function whileLoopArt( $iterations )
     return $funcOutput;
 }
 
-function whileDoArt( $iterations )
+function whileDoArt( int $iterations ) : string
 {
     $funcOutput = '';
     $counter = 0;
@@ -38,6 +40,18 @@ function whileDoArt( $iterations )
     while( $counter < $iterations );
     return $funcOutput;
 }
+
+try
+{
+    $firstLoop = forLoopArt( 10 );
+    $secondLoop = whileLoopArt( 10 );
+    $thirdLoop = whileDoArt( 10 );
+}
+catch( Exception $e )
+{
+    var_dump($e);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,9 +63,9 @@ function whileDoArt( $iterations )
 <body>
 
 <div id="tests">
-    For loop:   <?= forLoopArt(10) ?><br />
-    While loop: <?= whileLoopArt(10) ?><br />
-    While do:   <?= whileDoArt(10) ?><br />
+    For loop:   <?= $firstLoop ?><br />
+    While loop: <?= $secondLoop ?><br />
+    While do:   <?= $thirdLoop ?><br />
 </div>
 
 <br />

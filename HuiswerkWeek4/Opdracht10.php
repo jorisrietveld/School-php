@@ -3,8 +3,9 @@
  * Author: Joris Rietveld <jorisrietveld@gmail.com>
  * Created: 11-09-2016 08:33
  */
+declare(strict_types=1);
 
-function loopSom( $max )
+function loopSom( int $max ) : int
 {
     $total = 0;
 

@@ -3,6 +3,7 @@
  * Author: Joris Rietveld <jorisrietveld@gmail.com>
  * Created: 11-09-2016 08:33
  */
+declare(strict_types=1);
 
 function forLoopArt( $width )
 {
@@ -55,6 +56,17 @@ function doWhileLoopArt( $width )
     return $functionOutput;
 }
 
+try
+{
+    $firstLoop = forLoopArt( 10 );
+    $secondLoop = whileLoopArt( 10 );
+    $thirdLoop = doWhileLoopArt( 10 );
+}
+catch( Exception $e )
+{
+    var_dump($e);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,13 +79,13 @@ function doWhileLoopArt( $width )
 
 <div id="tests">
     <div class="triangle-tests">
-        For loop: <br/> <?= forLoopArt( 10 ) ?>
+        For loop: <br/> <?= $firstLoop ?>
 </div>
 <div class="triangle-tests">
-    While loop:<br/> <?= whileLoopArt( 10 ) ?>
+    While loop:<br/> <?= $secondLoop ?>
 </div>
 <div class="triangle-tests">
-    While do:<br/> <?= doWhileLoopArt( 10 ) ?>
+    While do:<br/> <?= $thirdLoop ?>
 </div>
 </div>
 <br />

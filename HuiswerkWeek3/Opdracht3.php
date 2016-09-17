@@ -4,7 +4,9 @@
  * Created: 11-09-2016 08:31
  */
 
-function lessthanOrGreaterThan( $number )
+declare(strict_types=1);
+
+function lessthanOrGreaterThan( int $number ) : string
 {
     if( $number > 100 )
     {

@@ -3,6 +3,8 @@
  * Author: Joris Rietveld <jorisrietveld@gmail.com>
  * Created: 11-09-2016 08:33
  */
+declare(strict_types=1);
+
 function forLoopArt( $width )
 {
     $funcOutput = '';
@@ -57,6 +59,17 @@ function whileDoArt( $width )
     return $funcOutput;
 }
 
+try
+{
+    $firstLoop = forLoopArt( 10 );
+    $secondLoop = whileLoopArt( 10 );
+    $thirdLoop = whileDoArt( 10 );
+}
+catch( Exception $e )
+{
+    var_dump($e);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,13 +82,13 @@ function whileDoArt( $width )
 
 <div id="tests">
     <div class="triangle-tests">
-        For loop: <br/> <?= forLoopArt( 11 ) ?>
+        For loop: <br/> <?= $firstLoop ?>
     </div>
     <div class="triangle-tests">
-    While loop:<br/> <?= whileLoopArt( 11 ) ?>
+    While loop:<br/> <?= $secondLoop ?>
     </div>
     <div class="triangle-tests">
-        While do:<br/><br/> <?= whileDoArt( 11 ) ?>
+        While do:<br/><br/> <?= $thirdLoop ?>
     </div>
 </div>
 <br />

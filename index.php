@@ -4,10 +4,12 @@
  * Created: 11-09-2016 10:32
  */
 
-
-
 function getFileList()
 {
+    $ignore = [
+        'autoload.php'
+    ];
+
     $html = '';
     $directories = array_filter(glob('*'), 'is_dir');
 
@@ -16,7 +18,7 @@ function getFileList()
         $html .= '<h3>' . $directory . '</h3>';
 
         $currentPath = $directory . DIRECTORY_SEPARATOR;
-        $files = glob($currentPath . '*.php');
+        $files = array_diff( glob($currentPath . '*.php'), $ignore);
 
         $html .= '<ul>';
 

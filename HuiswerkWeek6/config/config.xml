@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <maps>
+        <api-key>ABQIAAAAI4vi2njWsbWM7ylqbNTA_xTb9cXhFwjERd5O3JebjSLdO05y_hRKjjiCl6VnxbSjR3OBFP4_7PqW7Q</api-key>
+        <street>Lageweg 50</street>
+        <place>Wedde</place>
+    </maps>
+    <routs>
+        <route>
+            <name>Home</name>
+            <controller>home</controller>
+            <path>/home</path>
+            <method>index</method>
+        </route>
+        <route>
+            <name>Location</name>
+            <controller>location</controller>
+            <path>/locatie</path>
+            <method>index</method>
+        </route>
+        <route>
+            <name>Interests</name>
+            <controller>interests</controller>
+            <path>/interests</path>
+            <method>index</method>
+        </route>
+        <route>
+            <name>Contact</name>
+            <controller>contact</controller>
+            <path>/contact</path>
+            <method>index</method>
+        </route>
+    </routs>
+</configuration>
