@@ -11,7 +11,11 @@ define( 'CONFIG_DIR', ROOT_DIR . 'config' . DIRECTORY_SEPARATOR );
 
 require __DIR__.DIRECTORY_SEPARATOR."vendor/autoload.php";
 
-$request = new \Symfony\Component\HttpFoundation\Request();
+use Symfony\Component\HttpFoundation\Request;
 
-$application = new JorisRietveld\Website\Core\Application( $request::createFromGlobals() );
+$application = new JorisRietveld\Website\Core\Application( );
 
+// Handle the request and send an response
+$application->handle(
+    (new Request())::createFromGlobals()
+)->send();
