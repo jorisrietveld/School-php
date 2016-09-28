@@ -19,6 +19,10 @@ class HttpRequest
     private $files;
     private $body;
 
+    private $requestMethod;
+    private $requestUrl;
+
+
     public function __construct( array $query = [], array $post = [], $attributes = [], array $cookies = [], array $files = [], array $server = [], $content = NULL  )
     {
         $this->initialize( $query, $post, $attributes, $cookies, $files, $server, $content );
@@ -34,6 +38,8 @@ class HttpRequest
         $this->body = $content;
         $this->headers; // todo write header wrapper;
         $this->files = new ParameterContainer( $files ); // todo: write an wrapper for the files.
+
+        $this->requestMethod;
 
     }
 

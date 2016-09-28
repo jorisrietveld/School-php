@@ -12,13 +12,9 @@ class HttpResponse
 {
 
     const HTTP_CODE_OK = 200;
-
     const HTTP_CODE_NOT_FOUND = 404;
-
     const HTTP_CODE_INTERNAL_SERVER_ERROR = 500;
-
     const HTTP_CODE_I_AM_AN_TEAPOT = 418;
-
 
     private $queryContainer;
     private $postContainer;

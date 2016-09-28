@@ -35,8 +35,11 @@ class ConfigLoader
      * @param $key
      * @return mixed
      */
-    public function get( $key )
+    public function get( string $key = '' )
     {
+        $segments = explode( '.', $key );
+        
+        
         // TODO: implement an way to load config by dot separated values.
         return $this->configContainer->get( $key );
     }
@@ -73,8 +76,7 @@ class ConfigLoader
         if( file_exists( $fileName ) )
         {
             // Use an hack to parse the xml file in an array.
-            $jsonConfiguration = json_encode( simplexml_load_file( $fileName ));
-            $configArray = json_decode( $jsonConfiguration, TRUE);
+            $configArray = (array) simplexml_load_file( $fileName );
             $configArray = count($configArray) ? $configArray : [];
 
             $this->configContainer = new ParameterContainer(  $configArray );
@@ -82,6 +84,7 @@ class ConfigLoader
         }
         throw new FileNotFoundException( 'The configuration file: ' . $this->configDirectory .  ' can\'t be found');
     }
+
 
     /**
      * Singleton for getting this object.

@@ -5,11 +5,29 @@
  */
 declare(strict_types = 1);
 
-namespace Website\Core;
+namespace JorisRietveld\Website\Core;
 
 
 class RouteResolver
 {
+    private $routerConfiguration;
+    private $config;
+
+    public function __construct()
+    {
+        $routerConfiguration = ConfigLoader::getLoader()->get('route');
+    }
+
+    public function getRouterConfig()
+    {
+
+    }
+
+    public function resolve( $url )
+    {
+        
+    }
+
     // todo parse the route config
     // todo get match the url route to the config
 

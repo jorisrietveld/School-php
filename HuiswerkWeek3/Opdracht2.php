@@ -41,17 +41,17 @@ function numberToStringWithSwitch( int $grade ) : string
 {
     switch ($grade)
     {
-        case 1;
-        case 2;
-        case 3;
+        case 1:
+        case 2:
+        case 3:
             return "Zeer slecht";
 
-        case 4;
-        case 5;
+        case 4:
+        case 5:
             return "Onvoldoende";
 
-        case 6;
-        case 7;
+        case 6:
+        case 7:
             return "Voldoende";
 
         case 8;
@@ -79,7 +79,8 @@ try {
 
     // Generate table 2
     $table2 = '<table style="margin-left: 50px" cellpadding="0" cellspacing="0"><thead><tr><th colspan="2">Test with switch control flow</th> </tr><tr><th>Tested grade:</th><td>Text representation</td></tr></thead><tbody>';
-    for ($a = 0; $a <= 11; $a++) {
+    for ($a = 0; $a <= 11; $a++)
+    {
         $table2 .= '<tr><td>' . $a . '</td><td>' . numberToStringWithIfElse($a) . '</td>';
     }
     $table2 .= '</tbody></table>';

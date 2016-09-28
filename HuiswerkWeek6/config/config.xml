@@ -5,30 +5,30 @@
         <street>Lageweg 50</street>
         <place>Wedde</place>
     </maps>
-    <routs>
-        <route>
-            <name>Home</name>
-            <controller>home</controller>
-            <path>/home</path>
-            <method>index</method>
-        </route>
-        <route>
-            <name>Location</name>
-            <controller>location</controller>
-            <path>/locatie</path>
-            <method>index</method>
-        </route>
-        <route>
-            <name>Interests</name>
-            <controller>interests</controller>
-            <path>/interests</path>
-            <method>index</method>
-        </route>
-        <route>
-            <name>Contact</name>
-            <controller>contact</controller>
-            <path>/contact</path>
-            <method>index</method>
-        </route>
-    </routs>
+
+    <route>
+        <name>Home</name>
+        <controller>home</controller>
+        <path>/home</path>
+        <method>index</method>
+    </route>
+    <route>
+        <name>Location</name>
+        <controller>location</controller>
+        <path>/locatie</path>
+        <method>index</method>
+    </route>
+    <route>
+        <name>Interests</name>
+        <controller>interests</controller>
+        <path>/interests</path>
+        <method>index</method>
+    </route>
+    <route>
+        <name>Contact</name>
+        <controller>contact</controller>
+        <path>/contact</path>
+        <method>index</method>
+        <http-method>POST</http-method>
+    </route>
 </configuration>

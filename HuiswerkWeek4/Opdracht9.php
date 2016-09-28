@@ -25,8 +25,15 @@ function tableGenerator( int $width ) : Iterator
     <title>Control flow</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <style>
-        *{
-            font-family:"Ubuntu Mono";
+        * {
+            font-family: "Ubuntu Mono";
+        }
+        body{
+            background-color: black;
+        }
+        #tests, .triangle-tests{
+            width: 1000px;
+            color:#4cae4c;
         }
     </style>
 </head>
@@ -34,20 +41,18 @@ function tableGenerator( int $width ) : Iterator
 
 <div id="tests">
     <div class="triangle-tests">
-        Opdracht1<br/>
+        <h2 class="wake-up">Opdracht 9</h2><br/>
         <?php
-            foreach ( tableGenerator(30) as $item )
+            foreach ( tableGenerator(40) as $item )
             {
                 echo $item;
             }
         ?>
     </div>
-    </div>
 </div>
-<br />
 
-<fieldset id="code">
-    <legend>Source code: Opdracht9.php</legend>
+<fieldset style="top: 20px; position: relative" id="code">
+    <legend style="color: #4cae4c; background-color: black">Source code: Opdracht9.php</legend>
     <?= highlight_file('Opdracht9.php', true ) ?>
 </fieldset>
 

@@ -11,10 +11,10 @@ function loopSom( int $max ) : int
 
     for($i=1; $i < ($max+1); $i++)
     {
-        printf('Iteration: %d Total: %d<br>', $i, $total);
+        //printf('Iteration: %d Total: %d<br>', $i, $total);
         $total += $i;
     }
     return $total   ;
 }
 
-echo 'Final: '.loopSom(99);
+echo 'Answer: '.loopSom(100);

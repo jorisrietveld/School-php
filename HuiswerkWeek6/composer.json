@@ -9,7 +9,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "phpunit/phpunit": "^5.5"
+        "phpunit/phpunit": "^5.5",
+        "symfony/http-foundation": "3.1.*"
     },
     "autoload": {
         "psr-4": {

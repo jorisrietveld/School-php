@@ -8,10 +8,22 @@ declare(strict_types = 1);
 namespace JorisRietveld\Website\Core;
 
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 class Application
 {
-    public function handle( HttpRequest $request )
+    private $currentRequest;
+
+    public function handle( Request $request )
     {
-        return new HttpResponse( '<h1>HelloWorld</h1>', 200 );
+        $routerResolver = new RouteResolver();
+
+        return new Response( '<h1>ConfigLoader</h1>', 200 );
+    }
+
+    protected function callController(  )
+    {
+        
     }
 }
