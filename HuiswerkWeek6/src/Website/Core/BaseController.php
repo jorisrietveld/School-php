@@ -5,10 +5,10 @@
  */
 declare(strict_types = 1);
 
-namespace Website\Core;
+namespace JorisRietveld\Website\Core;
 
 
-class BaseController
+abstract class BaseController
 {
     public function __construct()
     {

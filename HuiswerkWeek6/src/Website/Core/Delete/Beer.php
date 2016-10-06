@@ -1,14 +1,14 @@
 <?php
 /**
  * Author: Joris Rietveld <jorisrietveld@gmail.com>
- * Created: 23-09-2016 12:36
+ * Created: 30-09-2016 21:58
  */
 declare(strict_types = 1);
 
-namespace Website\Helper;
+namespace JorisRietveld\Website\Core\TemplateEngine;
 
 
-interface Converter
+class Beer
 {
-
+    
 }

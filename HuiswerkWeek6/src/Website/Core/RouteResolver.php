@@ -44,7 +44,8 @@ class RouteResolver
                     (string)$route->name,
                     (string)$route->path,
                     (string)$route->method,
-                    (string)$route->controller
+                    (string)$route->controller,
+                    (isset($route->httpMethod)? $route->httpMethod : 'GET')
                 );
             }
         }
@@ -53,7 +54,8 @@ class RouteResolver
             (string)$this->routerConfiguration[0]->name,
             (string)$this->routerConfiguration[0]->path,
             (string)$this->routerConfiguration[0]->method,
-            (string)$this->routerConfiguration[0]->controller
+            (string)$this->routerConfiguration[0]->controller,
+            (isset( $this->routerConfiguration[0]->httpMethod)? (string)$this->routerConfiguration[0]->httpMethod : 'GET')
             );
     }
 }

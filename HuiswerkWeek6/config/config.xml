@@ -20,7 +20,7 @@
     </route>
     <route>
         <name>Home</name>
-        <controller>Come</controller>
+        <controller>Home</controller>
         <path>/home</path>
         <method>index</method>
     </route>
@@ -41,7 +41,7 @@
         <controller>Contact</controller>
         <path>/contact</path>
         <method>index</method>
-        <http-method>POST</http-method>
+        <httpMethod>POST</httpMethod>
     </route>
 
 </configuration>

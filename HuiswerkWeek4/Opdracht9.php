@@ -43,7 +43,7 @@ function tableGenerator( int $width ) : Iterator
     <div class="triangle-tests">
         <h2 class="wake-up">Opdracht 9</h2><br/>
         <?php
-            foreach ( tableGenerator(40) as $item )
+            foreach ( tableGenerator(10) as $item )
             {
                 echo $item;
             }

@@ -1,21 +1,21 @@
 <?php
 /**
  * Author: Joris Rietveld <jorisrietveld@gmail.com>
- * Created: 28-09-2016 13:49
+ * Created: 30-09-2016 21:13
  */
 declare(strict_types = 1);
 
 namespace JorisRietveld\Website\Controllers;
 
 
+use JorisRietveld\Website\Core\BaseController;
 use JorisRietveld\Website\Interfaces\ControllerContract;
 use Symfony\Component\HttpFoundation\Response;
-use JorisRietveld\Website\Core\BaseController;
 
-class Home extends BaseController implements ControllerContract
+class Error404 extends BaseController implements ControllerContract
 {
-    public function index() : Response
+    public function index()
     {
-        return new Response('<h1>Home</h1>', 200);
+        return new Response("Page not found", 404);
     }
 }
