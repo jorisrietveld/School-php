@@ -7,7 +7,7 @@
  * @warning:    Use this class at your own risk. Not recommended to set more than 20 addresses at a time.
  */
 
-namespace JorisRietveld\Website\ThirdParty;
+namespace JorisRietveld\TestMap\ThirdParty;
 
 class EasyGoogleMap
 {
@@ -533,7 +533,7 @@ class EasyGoogleMap
      */
     public function MapHolder()
     {
-        return "<div id=\"map\" style=\"width: 99.6%; height: " . $this->mMapHeight . "px;\"></div>";
+        return "<div id=\"map\" style=\"width: " . $this->mMapWidth . "px; height: " . $this->mMapHeight . "px;\"></div>";
     } # end function
 
     /**

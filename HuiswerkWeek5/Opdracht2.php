@@ -13,7 +13,7 @@ function prossessWords( array $words ) : Iterator
 {
     foreach ($words as $word) {
         // Is only the first character in upper case ?: convert to lower
-        if (ctype_upper(substr($word, 0, 1)) && ctype_lower((substr($word, 1, strlen($word))))) {
+        if (ctype_upper( $word[0]) && ctype_lower( (substr($word, 1, strlen($word))))) {
             yield $word;
         } else {
             yield strtolower($word);

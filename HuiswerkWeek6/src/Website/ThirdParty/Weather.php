@@ -4,7 +4,7 @@
  * Created: 16-09-2016 14:11
  */
 
-namespace Website\ThirdParty;
+namespace JorisRietveld\Website\ThirdParty;
 
 class Weather
 {

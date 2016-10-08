@@ -16,6 +16,9 @@ class Home extends BaseController implements ControllerContract
 {
     public function index() : Response
     {
-        return new Response('<h1>Home</h1>', 200);
+        $header = $this->loadedTemplate( 'header.html');
+        $footer = $this->loadedTemplate( 'footer.html');
+        
+        return new Response( $header . '<h1>Home</h1>' . $footer, 200);
     }
 }

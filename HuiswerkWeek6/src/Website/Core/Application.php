@@ -58,7 +58,7 @@ class Application
         $controller = '\\JorisRietveld\\Website\\Controllers\\' . $controller;
         $controller = new $controller();
 
-        $response = $controller->{$method}( $this->response );
+        $response = $controller->{$method}(  );
 
         if( is_a($response, '\Symfony\Component\HttpFoundation\Response'))
         {

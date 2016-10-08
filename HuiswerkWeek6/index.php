@@ -18,16 +18,5 @@ $application = new JorisRietveld\Website\Core\Application();
 $request = new Symfony\Component\HttpFoundation\Request();
 
 // Handle the request and send an response
-//$application->handle( $request::createFromGlobals() )->send();
+$application->handle( $request::createFromGlobals() )->send();
 
-/*$templateEnv = new \JorisRietveld\Website\Core\TemplateEngine\TemplateEnvironment();
-
-$sourceDirs = [
-    RESOURCES_DIR . 'views' . DIRECTORY_SEPARATOR,
-];
-
-
-var_dump( $templateEnv->addSourceDirectories( $sourceDirs )->getSourceDirectories());
-
-var_dump( $templateEnv->getTemplatesFiles() );*/
-include __DIR__ . DIRECTORY_SEPARATOR;

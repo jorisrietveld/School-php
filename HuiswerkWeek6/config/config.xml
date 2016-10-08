@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
+
     <maps>
-        <api-key>ABQIAAAAI4vi2njWsbWM7ylqbNTA_xTb9cXhFwjERd5O3JebjSLdO05y_hRKjjiCl6VnxbSjR3OBFP4_7PqW7Q</api-key>
-        <street>Lageweg 50</street>
-        <place>Wedde</place>
+        <api-key>AIzaSyAHL9jZdGrTkWXe1np536RX4AgTMuaxYrE</api-key>
+        <street>van Schaikweg 94</street>
+        <place>Emmen</place>
+        <window-text>Mijn school enzo</window-text>
     </maps>
 
     <route>
@@ -41,7 +43,20 @@
         <controller>Contact</controller>
         <path>/contact</path>
         <method>index</method>
+        <httpMethod>GET</httpMethod>
+    </route>
+    <route>
+        <name>Contact</name>
+        <controller>Contact</controller>
+        <path>/contact-handle</path>
+        <method>handle</method>
         <httpMethod>POST</httpMethod>
     </route>
-
+    <route>
+        <name>Weather</name>
+        <controller>Weather</controller>
+        <path>/weather</path>
+        <method>index</method>
+        <httpMethod>GET</httpMethod>
+    </route>
 </configuration>
