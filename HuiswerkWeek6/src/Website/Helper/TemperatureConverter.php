@@ -7,7 +7,6 @@ declare(strict_types = 1);
 
 namespace JorisRietveld\Website\Helper;
 
-
 class TemperatureConverter
 {
     CONST FAHRENHEIT_TO_RATE = 0.555555556;
@@ -19,41 +18,33 @@ class TemperatureConverter
     CONST FAHRENHEIT_KELVIN_CONST = 459.67;
     CONST FAHRENHEIT_CELSIUS_CONST = 32;
 
-
-    public function __construct()
-    {
-        
-    }
-
-    public function celsiusToFahrenheit( float $celsius, $precision = 0 ) : float
+    public static function celsiusToFahrenheit( float $celsius, $precision = 0 ) : float
     {
         return (float) round( $celsius * self::FAHRENHEIT_TO_RATE - self::CELSIUS_FAHRENHEIT_CONST, $precision);
     }
 
-    public function celsiusToKelvin( float $celsius, $precision = 0 ) : float
+    public static function celsiusToKelvin( float $celsius, $precision = 0 ) : float
     {
         return (float) round( $celsius + self::CELSIUS_KELVIN_CONST, $precision );
     }
-    
-    public function FahrenheitToKelvin( float $fahrenheit, $precision = 0) : float
+
+    public static function FahrenheitToKelvin( float $fahrenheit, $precision = 0) : float
     {
-        return (float) round( $fahrenheit + self::FAHRENHEIT_KELVIN_CONST * self::FAHRENHEIT_TO_RATE, $precision );
+        return (float) round( ($fahrenheit + self::FAHRENHEIT_KELVIN_CONST) * self::FAHRENHEIT_TO_RATE, $precision );
     }
 
-    public function fahrenheitToCelsius( float $fahrenheit, $precision = 0 ) : float
+    public static function fahrenheitToCelsius( float $fahrenheit, $precision = 0 ) : float
     {
-        return (float) round( $fahrenheit - self::FAHRENHEIT_CELSIUS_CONST * self::FAHRENHEIT_TO_RATE, $precision );
+        return (float) round( ($fahrenheit - self::FAHRENHEIT_CELSIUS_CONST) * self::FAHRENHEIT_TO_RATE, $precision );
     }
 
-    public function kelvinToFahrenheit( float $kelvin, $precision = 0 ) : float
+    public static function kelvinToFahrenheit( float $kelvin, $precision = 0 ) : float
     {
-        
+        return (float) round( ($kelvin * self::FAHRENHEIT_FROM_RATE) - self::CELSIUS_KELVIN_CONST, $precision );
     }
 
-    public function kelvinToCelsius( float $fahrenheit, $precision = 0 ) : float
+    public static function kelvinToCelsius( float $kelvin, $precision = 0 ) : float
     {
-        
+        return (float) round( $kelvin + self::CELSIUS_KELVIN_CONST, $precision );
     }
-
-
 }

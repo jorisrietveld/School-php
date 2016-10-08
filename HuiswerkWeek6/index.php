@@ -6,17 +6,17 @@
 
 declare(strict_types = 1);
 
-define( 'ROOT_DIR', __DIR__ . DIRECTORY_SEPARATOR );
-define( 'CONFIG_DIR', ROOT_DIR . 'config' . DIRECTORY_SEPARATOR );
-define( 'WEBSITE_DIR', ROOT_DIR . 'src' . DIRECTORY_SEPARATOR . 'Website' . DIRECTORY_SEPARATOR );
-define( 'RESOURCES_DIR', WEBSITE_DIR . 'Resources' . DIRECTORY_SEPARATOR );
+define('ROOT_DIR', __DIR__ . DIRECTORY_SEPARATOR);
+define('CONFIG_DIR', ROOT_DIR . 'config' . DIRECTORY_SEPARATOR);
+define('WEBSITE_DIR', ROOT_DIR . 'src' . DIRECTORY_SEPARATOR . 'Website' . DIRECTORY_SEPARATOR);
+define('RESOURCES_DIR', WEBSITE_DIR . 'Resources' . DIRECTORY_SEPARATOR);
 
-require __DIR__.DIRECTORY_SEPARATOR."vendor/autoload.php";
+require __DIR__ . DIRECTORY_SEPARATOR . "vendor/autoload.php";
 
 
 $application = new JorisRietveld\Website\Core\Application();
 $request = new Symfony\Component\HttpFoundation\Request();
 
 // Handle the request and send an response
-$application->handle( $request::createFromGlobals() )->send();
+$application->handle($request::createFromGlobals())->send();
 

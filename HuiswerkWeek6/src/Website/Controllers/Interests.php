@@ -16,9 +16,26 @@ class Interests extends BaseController implements ControllerContract
 {
     public function index()
     {
-        $header = $this->loadedTemplate( 'header.html');
-        $footer = $this->loadedTemplate( 'footer.html');
+        return new Response( $this->getWebPage(), 200);
+    }
 
-        return new Response( $header . '<h1>Hobbies enzo</h1>' . $footer, 200);
+    protected function getWebPage()
+    {
+        $header = $this->loadedTemplate('header.html');
+        $footer = $this->loadedTemplate('footer.html');
+
+        $main = '
+            <h1>Mijn Hobbies</h1>
+            <div class="row">
+            <h3 class="col-lg-12">Tuinieren</h3>
+            <p>Tuinieren enzo</p>
+            <img src="images/garden6.jpg" class="hobby-img col-lg-6"/>
+            <img src="images/garden7.jpg" class="hobby-img col-lg-6"/>
+            </div>
+                               
+            
+        ';
+
+        return $header . $main . $footer;
     }
 }

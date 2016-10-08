@@ -7,6 +7,10 @@
         <place>Emmen</place>
         <window-text>Mijn school enzo</window-text>
     </maps>
+    <translate>
+        <api-key>trnsl.1.1.20161008T210816Z.46085af52648e1ee.b89bab2fe163a83fbe6413d38322a11818d9630b</api-key>
+        <url>https://translate.yandex.net/api/v1.5/tr.json/translate</url>
+    </translate>
 
     <route>
         <name>Error404</name>
