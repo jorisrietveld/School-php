@@ -16,9 +16,21 @@ class Home extends BaseController implements ControllerContract
 {
     public function index() : Response
     {
-        $header = $this->loadedTemplate( 'header.html');
-        $footer = $this->loadedTemplate( 'footer.html');
-        
-        return new Response( $header . '<h1>Home</h1>' . $footer, 200);
+        return new Response($this->getWebPage(), 200);
+    }
+
+    protected function getWebPage()
+    {
+        $header = $this->loadedTemplate('header.html');
+        $footer = $this->loadedTemplate('footer.html');
+
+        $content = '
+            <h1>Welkom op 127.0.0.1:80</h1>
+            <div id="terminal">
+            
+            </div>
+        ';
+
+        return $header . $content . $footer;
     }
 }

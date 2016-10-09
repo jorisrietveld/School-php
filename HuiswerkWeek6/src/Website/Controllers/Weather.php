@@ -40,7 +40,7 @@ class Weather extends BaseController implements ControllerContract
             <h1>Het weer in: ' . $weatherInfo[ 'location' ] . '</h1>
             <div class="row weather-content-wrapper">
             
-                <div class="weatherinfo-wrapper col-lg-4">
+                <div class="weatherinfo-wrapper col-lg-4 text-center">
                     <i class="wi wi-yahoo-' . $weatherInfo[ 'code' ] . ' weather-icon"></i>
                     <br />
                     <span class="weather-description">' . $weatherInfo['string'] . '</span>

@@ -25,7 +25,6 @@ class Location extends BaseController implements ControllerContract
         $pageContent = '
             <h1>Mijn school locatie</h1>
             ' . $mapElement . '
-            <br />
         ';
 
         return new Response( $header . $pageContent . $footer, 200);
