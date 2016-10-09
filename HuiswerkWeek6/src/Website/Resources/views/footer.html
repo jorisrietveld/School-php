@@ -10,13 +10,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/0.11.11/js/jquery.terminal.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/0.11.11/css/jquery.terminal.min.css" rel="stylesheet"/>
 <script>
+
   jQuery(function($, undefined) {
     if( document.getElementById('#terminal') !== 'undifined' ) {
       $('#terminal').terminal(function (command, term) {
 
         if( command == 'help' )
         {
-          term.echo( 'HELP INFORMATION\n' +
+          term.echo( '[----------------------------------------------------]\n' +
+                     '[   HELP!   HELP!    HELP!   HELP!    HELP!   HELP!  ]\n' +
+                     '[----------------------------------------------------]\n\n' +
               'type: location home; voor de home pagina\n' +
               'type: location locatie; voor de locatie pagina\n' +
               'type: location weather; voor de weer pagina\n' +
@@ -45,7 +48,7 @@
         ' type location "webpage" om te navigeren of type help voor een overzicht van de webpagina\'s\n',
         name: 'Welkom op dezuh site',
         height: 400,
-        width: ( window.screen.width * 0.60 ),
+        width: ( $('.content-wrapper').width() * 0.94 ),
         prompt: 'root@nsa.gov> '
       });
     }

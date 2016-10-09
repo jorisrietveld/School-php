@@ -18,5 +18,5 @@ $application = new JorisRietveld\Website\Core\Application();
 $request = new Symfony\Component\HttpFoundation\Request();
 
 // Handle the request and send an response
-$application->handle($request::createFromGlobals())->send();
+$application->handle( $request::createFromGlobals() )->send();
 
