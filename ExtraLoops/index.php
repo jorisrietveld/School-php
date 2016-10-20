@@ -5,28 +5,38 @@
  */
 
 require 'src' . DIRECTORY_SEPARATOR . 'MakeLoop.php';
-
+$loop = new MakeLoop();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="EN">
 <head>
-<style>
-    *{
-        font-family: "Ubuntu Mono";
-    }
-</style>
+    <meta charset="UTF-8"/>
+    <title>Loops</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<?php
-    foreach ( (new MakeLoop())->opdracht1(10) as $functionOutput )
-    {
-        echo $functionOutput;
-    }
 
-foreach ( (new MakeLoop())->opdracht2(10) as $functionOutput )
-{
-    echo $functionOutput;
-}
-?>
+<div class="container">
+    <div class="col-4">
+        <h3>Stairs</h3>
+        <?php
+        foreach ( $loop->makeStairs( 10, 2 ) as $output )
+        {
+            echo $output;
+        }
+        ?>
+    </div>
+
+    <div class="col-4">
+        <h3>Sideway piramid</h3>
+
+    </div>
+
+    <div class="col-4">
+        <h3>Pentagram</h3>
+
+    </div>
+
+</div>
 </body>
 </html>

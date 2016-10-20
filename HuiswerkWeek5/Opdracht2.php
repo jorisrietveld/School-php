@@ -11,13 +11,16 @@
  */
 function prossessWords( array $words ) : Iterator
 {
-    foreach ($words as $word) {
+    foreach ($words as $word)
+    {
         // Is only the first character in upper case ?: convert to lower
-        if (ctype_upper( $word[0]) && ctype_lower( (substr($word, 1, strlen($word))))) {
+        if ( ctype_upper( $word[0]) && ctype_lower( (substr($word, 1))))
+        {
             yield $word;
-        } else {
+        }
+        else
+        {
             yield strtolower($word);
-
         }
     }
 }
@@ -34,7 +37,7 @@ function parsePost() : string
 
     foreach ( prossessWords( $words) as $word )
     {
-        $return .= $word . '&nbsp;';
+        $return .= $word . '<br/>';
     }
     return $return;
 }
@@ -54,7 +57,7 @@ function parsePost() : string
         <label for="form-input-text">Type je text hier:</label>
         <br/>
         <textarea name="form-input-text" placeholder="Type your text here...">
-
+            <?= !empty( $_POST['form-input-text']) ? $_POST['form-input-text'] : '' ?>
         </textarea>
         <input type="submit" value="Formulier verzender"/>
     </fieldset>

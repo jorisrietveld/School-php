@@ -11,10 +11,12 @@ namespace JorisRietveld\Website\Core;
 class RouteResolver
 {
     private $routerConfiguration;
+    private $hostConfiguration;
 
     public function __construct()
     {
         $this->routerConfiguration = ConfigLoader::getLoader()->get('route');
+        $this->hostConfiguration = ConfigLoader::getLoader()->get('host');
     }
 
     /**
@@ -38,7 +40,7 @@ class RouteResolver
     {
         foreach ($this->routerConfiguration as $route )
         {
-            if( strtolower( $url ) == (string)$route->path )
+            if( str_replace( $this->selectHostConfiguration(), '', strtolower( $url ) ) == (string)$route->path )
             {
                 return new Route(
                     (string)$route->name,
@@ -57,5 +59,16 @@ class RouteResolver
             (string)$this->routerConfiguration[0]->controller,
             (isset( $this->routerConfiguration[0]->httpMethod)? (string)$this->routerConfiguration[0]->httpMethod : 'GET')
             );
+    }
+
+    protected function selectHostConfiguration()
+    {
+        foreach ( $this->hostConfiguration as $host)
+        {
+            if( $host->ip == $_SERVER['HTTP_HOST'] )
+            {
+                return $host->prefix;
+            }
+        }
     }
 }

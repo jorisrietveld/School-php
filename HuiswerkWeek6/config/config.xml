@@ -7,10 +7,22 @@
         <place>Emmen</place>
         <window-text>Dit is de locatie van mijn school, Helaas kon google maps mijn adres niet vinden...</window-text>
     </maps>
+
     <translate>
         <api-key>trnsl.1.1.20161008T210816Z.46085af52648e1ee.b89bab2fe163a83fbe6413d38322a11818d9630b</api-key>
         <url>https://translate.yandex.net/api/v1.5/tr.json/translate</url>
     </translate>
+
+    <host>
+        <name>localhost</name>
+        <ip>127.0.0.1</ip>
+        <prefix></prefix>
+    </host>
+    <host>
+        <name>prodserver</name>
+        <ip>146.185.141.142</ip>
+        <prefix>/joris/eindopdrachtphp</prefix>
+    </host>
 
     <route>
         <name>Error404</name>

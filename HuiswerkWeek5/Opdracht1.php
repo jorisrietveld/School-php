@@ -25,7 +25,7 @@ function parsePost() : string
 {
     $counter = 0;
     $return = '';
-    $words = explode(' ', trim(htmlentities( $_POST['form-input-text'], ENT_QUOTES, 'UTF-8')));
+    $words = explode(' ', trim( htmlentities( $_POST['form-input-text'], ENT_QUOTES, 'UTF-8') ));
     $newWords = prossessWords($words);
 
     foreach ($newWords as $word )
@@ -41,7 +41,7 @@ function parsePost() : string
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Euros to cents</title>
+    <title>First letter to last converter</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
@@ -51,7 +51,7 @@ function parsePost() : string
         <label for="form-input-text">Type je text hier:</label>
         <br/>
         <textarea name="form-input-text" placeholder="Type your text here...">
-
+            <?= !empty( $_POST['form-input-text']) ? $_POST['form-input-text'] : '' ?>
         </textarea>
         <input type="submit" value="Formulier verzender"/>
     </fieldset>

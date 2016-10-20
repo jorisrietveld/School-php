@@ -25,7 +25,7 @@ class Home extends BaseController implements ControllerContract
         $footer = $this->loadedTemplate('footer.html');
 
         $content = '
-            <h1>Welkom op 127.0.0.1:80</h1>
+            <h1>Welkom op ' . $_SERVER['HTTP_HOST'] .':' . $_SERVER['SERVER_PORT'] . '</h1>
             <div id="terminal">
             
             </div>
